@@ -4,34 +4,49 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="keywords" content="math,science" />
         <script type="text/javascript">
-            String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+            // 去除字符串首尾处的空白字符
+            String.prototype.trim = function() {
+                return this.replace(/^\s+|\s+$/g, '');
+            };
+
+            // 从 url 获取参数
             function getParameter(name) {
                 var value = new RegExp(name+"=([^&]*)","i").exec(window.location);
-                if (value!=null && value.length>1) {
+
+                if (value!= null && value.length>1) {
                     value = decodeURIComponent(value[1].replace(/\+/g,' '));
                 } else {
                     value = null;
                 }
+
                 return value;
             }
+
+            // 插入 html
             function insertHtml(content) {
                 if (content!=null && content.length>0) {
                     document.write(content);
                 }
             }
+
+            // 给 id 赋值
             function setValue(id, content) {
                 if (content!=null && content.length>0) {
                     document.getElementById(id).value = content;
                 }
             }
 
+            // 读取 tech.txt 文件
             var con = new XMLHttpRequest();
             con.open("GET", "tech.txt", false);
             con.send(null);
             var s = con.responseText;
+
             WIRISplugins_js = "integration/WIRISplugins.js";
             tech = s.split("#")[0].trim();
+
             window._wrs_int_path = window._wrs_int_path == null ? "" : window._wrs_int_path;
+
             if (tech=="php") {
                 _wrs_int_conf_file_override = _wrs_int_path > 0 ?
                                               _wrs_int_path + "/configurationjs.php" :
@@ -48,6 +63,7 @@
                 _wrs_int_conf_file_override = "integration/configurationjs";
                 WIRISplugins_js = "/integration/WIRISplugins.js";
             }
+
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = WIRISplugins_js + "?viewer=image";
@@ -55,6 +71,7 @@
 
             var content = getParameter("content");
         </script>
+
         <script type="text/javascript" src="core/display.js"></script>
         <script type="text/javascript" src="wirisplugin-generic.js"></script>
 
@@ -127,7 +144,8 @@
         <title>WIRIS Plugin generic integration on PHP | Educational mathematics</title>
     </head>
     <body>
-        <h1><a href="http://www.wiris.com">
+        <h1>
+            <a href="http://www.wiris.com">
                 <img src="https://www.wiris.com/en/system/files/attachments/889/wiris_50.png" title="WIRIS" />
             </a>
             Test page for WIRIS plugins
@@ -153,6 +171,7 @@
 
         <script>
             var value = document.getElementById("example").value;
+
             if (value.length==0 || value=="<!-- content "+"value -->") {
                 document.getElementById("previewBox").innerHTML = '<span id="previewMessage">Press the "Preview" button.</span>';
             }
