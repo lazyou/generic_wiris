@@ -1,3 +1,13 @@
+###  TODO
+* 集成到富文本编辑器 (交给前端)
+
+* 前端能拿到 MathML, 需求如下:
+    * MathML to LaTeX
+
+    * MathML OR LaTex TO png 图片
+        * MathML OR LaTex 直接排版出完整样式也行
+
+
 ### 公式录入编辑器 http://www.wiris.com/
 * base64 转为图片保存 png
 * 保存 latex 写法 (原始是 mathml)
