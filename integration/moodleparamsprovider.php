@@ -16,35 +16,40 @@
 
 require_once('../../../lib/moodlelib.php');
 
-class MoodleParamsProvider implements com_wiris_plugin_api_ParamsProvider {
-
+class MoodleParamsProvider implements com_wiris_plugin_api_ParamsProvider
+{
     private $parameters = array();
     private $serviceparamlist = array('mml', 'lang', 'service', 'latex');
     private $wrap;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->wrap = com_wiris_system_CallWrapper::getInstance();
     }
 
-    public function getrequiredparameter($paramname) {
+    public function getrequiredparameter($paramname)
+    {
         $this->wrap->stop();
         $param = required_param($paramname, PARAM_RAW);
         $this->wrap->start();
         return $param;
     }
 
-    public function getparameter($paramname, $dflt) {
+    public function getparameter($paramname, $dflt)
+    {
         $this->wrap->stop();
         $param = optional_param($paramname, $dflt, PARAM_RAW);
         $this->wrap->start();
         return $param;
     }
 
-    public function getparameters() {
+    public function getparameters()
+    {
         return $this->parameters;
     }
 
-    public function getserviceparameters() {
+    public function getserviceparameters()
+    {
         $this->wrap->stop();
         $serviceparams = array();
         foreach ($this->serviceparamlist as $key) {
@@ -54,10 +59,10 @@ class MoodleParamsProvider implements com_wiris_plugin_api_ParamsProvider {
         }
         $this->wrap->start();
         return $serviceparams;
-
     }
 
-    public function getrenderparameters($configuration) {
+    public function getrenderparameters($configuration)
+    {
         $this->wrap->stop();
         $renderparams = array();
         // Can't change EDITOR_PARAMETER_LIST variable name so at this point condingStandars should be disabled.

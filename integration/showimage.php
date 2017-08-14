@@ -1,6 +1,6 @@
 <?php
 // ${license.statement}
-require_once ('pluginbuilder.php');
+require_once('pluginbuilder.php');
 
 $provider = $pluginBuilder->getCustomParamsProvider();
 
@@ -36,7 +36,7 @@ if ($pluginBuilder->getConfiguration()->getProperty("wirispluginperformance", "f
     }
     $r = $render->showImageJson($digest, $lang);
     // If a formula is not in server cache, this request shouldn't be cached.
-    if (strpos($r, "warning" )) {
+    if (strpos($r, "warning")) {
         header("Pragma: no-cache"); // HTTP 1.0
         header("Cache-Control: no-cache, no-store, must-revalidate"); //HTTP 1.1
     }

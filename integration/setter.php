@@ -3,7 +3,7 @@ session_start();
 $_SESSION["pluginbuilder"] = null;
 $_SESSION["issetter"] = true;
 // Loaded from configuration.
-require_once ('pluginbuilder.php');
+require_once('pluginbuilder.php');
 
 $provider = $pluginBuilder->getCustomParamsProvider();
 $variableKeys = $provider->getRequiredParameter('variablekeys');

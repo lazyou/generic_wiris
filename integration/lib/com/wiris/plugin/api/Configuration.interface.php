@@ -1,11 +1,12 @@
 <?php
 
-interface com_wiris_plugin_api_Configuration {
-	function setConfigurations($configurationKeys, $configurationValues);
-	function getJsonConfiguration($configurationKeys);
-	function setInitObject($context);
-	function setProperty($name, $value);
-	function getProperty($name, $dflt);
-	function getJavaScriptConfigurationJson();
-	function getFullConfiguration();
+interface com_wiris_plugin_api_Configuration
+{
+    public function setConfigurations($configurationKeys, $configurationValues);
+    public function getJsonConfiguration($configurationKeys);
+    public function setInitObject($context);
+    public function setProperty($name, $value);
+    public function getProperty($name, $dflt);
+    public function getJavaScriptConfigurationJson();
+    public function getFullConfiguration();
 }

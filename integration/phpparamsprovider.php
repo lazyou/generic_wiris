@@ -1,14 +1,16 @@
 <?php
-class PhpParamsProvider implements com_wiris_plugin_api_ParamsProvider {
-
+class PhpParamsProvider implements com_wiris_plugin_api_ParamsProvider
+{
     private $parameters = array();
     private $serviceParamsList = array('mml', 'lang', 'service', 'latex');
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->parameters = array_merge($_GET, $_POST);
     }
 
-    public function getRequiredParameter($paramname) {
+    public function getRequiredParameter($paramname)
+    {
         if (array_key_exists($paramname, $this->parameters)) {
             return $this->parameters[$paramname];
         } else {
@@ -16,7 +18,8 @@ class PhpParamsProvider implements com_wiris_plugin_api_ParamsProvider {
         }
     }
 
-    public function getParameter($paramname, $dflt) {
+    public function getParameter($paramname, $dflt)
+    {
         if (array_key_exists($paramname, $this->parameters)) {
             return $this->parameters[$paramname];
         } else {
@@ -24,11 +27,13 @@ class PhpParamsProvider implements com_wiris_plugin_api_ParamsProvider {
         }
     }
 
-    public function getParameters() {
+    public function getParameters()
+    {
         return $this->parameters;
     }
 
-    public function getServiceParameters() {
+    public function getServiceParameters()
+    {
         $serviceParams = array();
         foreach ($this->serviceParamsList as $key) {
             if (array_key_exists($key, $this->parameters)) {
@@ -36,10 +41,10 @@ class PhpParamsProvider implements com_wiris_plugin_api_ParamsProvider {
             }
         }
         return $serviceParams;
-
     }
 
-    public function getRenderParameters($configuration) {
+    public function getRenderParameters($configuration)
+    {
         $renderParams = array();
         $renderParameterList = explode(",", $configuration->getProperty(com_wiris_plugin_api_ConfigurationKeys::$EDITOR_PARAMETERS_LIST, com_wiris_plugin_api_ConfigurationKeys::$EDITOR_PARAMETERS_DEFAULT_LIST));
         $i = null;

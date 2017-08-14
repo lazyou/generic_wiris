@@ -1,7 +1,7 @@
 <?php
 
 // Loaded from configuration
-require_once ('pluginbuilder.php');
+require_once('pluginbuilder.php');
 
 $provider = $pluginBuilder->getCustomParamsProvider();
 $variablekeys = $provider->getRequiredParameter('variablekeys');

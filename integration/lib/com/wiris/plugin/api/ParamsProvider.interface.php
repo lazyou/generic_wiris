@@ -1,9 +1,10 @@
 <?php
 
-interface com_wiris_plugin_api_ParamsProvider {
-	function getServiceParameters();
-	function getRenderParameters($configuration);
-	function getParameters();
-	function getRequiredParameter($param);
-	function getParameter($param, $dflt);
+interface com_wiris_plugin_api_ParamsProvider
+{
+    public function getServiceParameters();
+    public function getRenderParameters($configuration);
+    public function getParameters();
+    public function getRequiredParameter($param);
+    public function getParameter($param, $dflt);
 }

@@ -1,6 +1,7 @@
 <?php
 
-interface com_wiris_plugin_asyncapi_BytesCallback {
-	function error($msg);
-	function returnBytes($bs);
+interface com_wiris_plugin_asyncapi_BytesCallback
+{
+    public function error($msg);
+    public function returnBytes($bs);
 }

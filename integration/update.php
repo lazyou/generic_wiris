@@ -1,6 +1,6 @@
 <?php
 /**
- * This script makes the necessary changes to saved data files so they 
+ * This script makes the necessary changes to saved data files so they
  * perfectly work with the current version of WIRIS plugin. You should run it
  * once after updating WIRIS plugin. You can safely run it more than one time.
  * This file shouln't be publicly available.
@@ -13,15 +13,15 @@
  
 // WARNING: Comment the following line before using this script, and re-comment
 // it once done.
-header('HTTP/1.0 403 Forbidden'); 
-echo '<h3>Forbidden</h3><p>If you are the server administrator, comment the first code line in update.php script.</p>'; 
+header('HTTP/1.0 403 Forbidden');
+echo '<h3>Forbidden</h3><p>If you are the server administrator, comment the first code line in update.php script.</p>';
 die();
   
 // Load WIRIS plugin.
-require_once ('pluginbuilder.php');
+require_once('pluginbuilder.php');
 // Set PHP environment.
-set_time_limit(0); 
-error_reporting(E_ALL); 
+set_time_limit(0);
+error_reporting(E_ALL);
 ini_set("display_errors", 1);
 // Load the file handler object.
 $store = $pluginBuilder->getStorageAndCache();

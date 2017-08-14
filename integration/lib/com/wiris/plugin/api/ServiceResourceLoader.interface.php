@@ -1,6 +1,7 @@
 <?php
 
-interface com_wiris_plugin_api_ServiceResourceLoader {
-	function getContentType($name);
-	function getContent($resource);
+interface com_wiris_plugin_api_ServiceResourceLoader
+{
+    public function getContentType($name);
+    public function getContent($resource);
 }

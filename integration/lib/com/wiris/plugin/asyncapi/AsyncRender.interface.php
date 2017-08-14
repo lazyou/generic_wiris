@@ -1,7 +1,8 @@
 <?php
 
-interface com_wiris_plugin_asyncapi_AsyncRender {
-	function getMathml($digest, $call);
-	function showImage($digest, $mml, $param, $call);
-	function createImage($mml, $param, &$output, $call);
+interface com_wiris_plugin_asyncapi_AsyncRender
+{
+    public function getMathml($digest, $call);
+    public function showImage($digest, $mml, $param, $call);
+    public function createImage($mml, $param, &$output, $call);
 }

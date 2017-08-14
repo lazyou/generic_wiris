@@ -1,6 +1,6 @@
 <?php
 // ${license.statement}
-require_once ('pluginbuilder.php');
+require_once('pluginbuilder.php');
 
 $provider = $pluginBuilder->getCustomParamsProvider();
 $image = $provider->getRequiredParameter('image');

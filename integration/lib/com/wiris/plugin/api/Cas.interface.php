@@ -1,7 +1,8 @@
 <?php
 
-interface com_wiris_plugin_api_Cas {
-	function cas($mode, $language);
-	function createCasImage($imageParameter);
-	function showCasImage($formula, $provider);
+interface com_wiris_plugin_api_Cas
+{
+    public function cas($mode, $language);
+    public function createCasImage($imageParameter);
+    public function showCasImage($formula, $provider);
 }
