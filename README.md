@@ -96,3 +96,19 @@
 
 * Comparing formulas:
     * 略 ...
+
+
+### MathJax 扩展
+* MathJax的一些主要功能包括：
+    * 在HTML页面中高质量地显示LaTeX，MathML和AsciiMath符号;
+    * 在大多数浏览器中都支持，没有插件，额外的字体或读写器的特殊设置;
+    * 易于撰写，灵活的发布商，可扩展的开发人员;
+    * 支持数学可访问性，剪切和粘贴互操作性以及其他高级功能;
+    * 强大的API与其他Web应用程序集成;
+
+
+* https://www.mathjax.org
+
+
+### 扩展 -- 什么是 MathML
+* 数学标记语言（Mathematical Markup Language，MathML），是一种基于XML的标准，用来描述数学符号和公式。它的目标是把数学公式集成到万维网和其他文档中。从2015年开始，MathML成为了HTML5的一部分和ISO标准。
