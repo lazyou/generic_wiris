@@ -112,3 +112,7 @@
 
 ### 扩展 -- 什么是 MathML
 * 数学标记语言（Mathematical Markup Language，MathML），是一种基于XML的标准，用来描述数学符号和公式。它的目标是把数学公式集成到万维网和其他文档中。从2015年开始，MathML成为了HTML5的一部分和ISO标准。
+
+
+
+### 离线缓存
