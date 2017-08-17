@@ -11,6 +11,52 @@
       editor = com.wiris.jsEditor.JsEditor.newInstance({'language': 'zh'});
 
       editor.insertInto(document.getElementById('editorContainer'));
+
+			// 本质上 toolbar 是不区分 化学 和 数学的, 只不过是对 化学 和 数学常用公式的归纳
+			// toolbar 切换
+			// editor.setParams({
+			//  'toolbar':'<toolbar ref="chemistry"/>' // 化学设置
+			//  'toolbar':'<toolbar ref="general"/>' // 默认数学
+			// });
+
+      // editor.setParams({
+			// 				'toolbar': '<toolbar ref="general">' +
+			// 					'<tab ref="general">' +
+			// 						'<removeComponent ref="copy" />' +
+			// 						'<component ref="squareColumn" before="squareRoot" />' +
+			// 					'</tab>' +
+			// 					'<tab ref="arrows">' +
+			// 						'<sectionSeparator/>' +
+			// 						'<component ref="squareColumn" />' +
+			// 					'</tab>' +
+			// 					'<tab ref="greek" empty="true">' +
+			// 						'<component ref="squareColumn" />' +
+			// 						'<sectionSeparator layout="horizontal" rows="3" />' +
+			// 						'<component ref="cut" />' +
+			// 						'<component ref="cut" />' +
+			// 						'<component ref="copy" />' +										
+			// 						'<component ref="copy" />' +
+			// 						'<component ref="paste" />' +
+			// 						'<component ref="paste" />' +
+			// 						'<newSection rows="3" position="0">' +
+			// 							'<component ref="cut" />' +
+			// 							'<component ref="cut" />' +
+			// 							'<component ref="copy" />' +										
+			// 							'<component ref="copy" />' +
+			// 							'<component ref="paste" />' +
+			// 							'<component ref="paste" />' +
+			// 						'</newSection>' +
+			// 					'</tab>' +
+			// 					'<removeTab ref="symbols" />' +
+			// 					'<tab ref="symbols" empty="true">' +
+			// 						'<component ref="squareColumn" />' +
+			// 						'<component ref="squareColumn" extra="true"/>' +
+			// 					'</tab>' +
+			// 					// REARRANGE
+			// 					'<removeTab ref="matrices" />' +
+			// 					'<tab ref="matrices" before="general" />' +
+			// 				'</toolbar>'
+			// 			});
     }
     </script>
   </head>
